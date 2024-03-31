@@ -2,32 +2,66 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+/* .dark  {
+  background-color: #292B32;
+  color: #FFFFFF;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+.light  {
+  color: #000;
+  background-color: #F7F7F8;
+} */
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: #000;
+  background-color: #F7F7F8;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+[data-theme="dark"] body {
+  background-color: #292B32;
+  color: #FFFFFF;
+}
+
+card{
+  background-color: #FFFFFF;
+  filter: drop-shadow(0 8px 16 rgba(0,0,0,0.05));
+}
+
+[data-theme="dark"] card {
+  background-color: #3B3E47;
+  filter: drop-shadow(0 8px 16 rgba(0,0,0,0.05));
+}
+
+.score{
+  background-color: #F7F7F8;
+}
+
+[data-theme="dark"] .score{
+  background-color: #292B32;
+}
+
+
+.scoreH{
+  color:#525965;
+}
+
+
+[data-theme="dark"] .scoreH{
+  color:#DFDFDF;
+}
+
+
+[data-theme="dark"] .collection{
+  background-image: linear-gradient(#18282A,#221A2C);
+}
+
+ticket{
+  background-color: #FFFFFF;
+  color:#000000;
+}
+
+[data-theme="dark"] ticket{
+  background-color: #818A97;
+  color:#FFFFFF;
 }
